@@ -34,7 +34,7 @@ p {
 }
 
 p::selection {
-    background: rgba(112, 110, 243, 0.826);
+    background: rgba(242, 255, 167, 0.826);
 }
 
 .align {
