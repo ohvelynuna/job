@@ -33,7 +33,7 @@ p {
     margin: 0 auto;
 }
 
-p::selection {
+::selection {
     background: rgba(242, 255, 167, 0.826);
 }
 
