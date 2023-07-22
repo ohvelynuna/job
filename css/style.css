@@ -33,6 +33,10 @@ p {
     margin: 0 auto;
 }
 
+p::selection {
+    background: rgba(112, 110, 243, 0.826);
+}
+
 .align {
     margin: 0px 20vw 20px;
     padding-bottom: 20px;
