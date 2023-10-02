@@ -1,0 +1,112 @@
+body {
+    border-radius: 10px;
+    margin: 5px auto;
+    width: 90vw;
+    min-width: 100px;
+    max-width: 900px;
+    box-shadow: 0px 0px 50px #1abb9c;
+    font-family: 'Times New Roman', Times, serif;
+    color: #272343;
+    -webkit-font-smoothing: anti-aliased;
+}
+
+.header {
+    border-radius: 10px 10px 0px 0px;
+    background-image: url(https://images.pexels.com/photos/11838731/pexels-photo-11838731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+    background-size: cover;
+    height: 100vh;
+    margin: 0px 0px;
+    text-align: center;
+    color: white;
+    font-size: calc(12px + 1.5vw);
+    text-shadow: 0px 0px 20px rgb(128,128,128,1);
+    font-family: serif;
+    display: flex;
+    line-height: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    -webkit-font-smoothing: anti-aliased;
+}
+
+
+p {
+    width: 50vw;
+    margin: 0 auto;
+}
+
+::selection {
+    background: rgba(242, 255, 167, 0.826);
+}
+
+.align {
+    margin: 0px 20vw 20px;
+    padding-bottom: 20px;
+}
+
+
+li a {
+    color: #fafafa;
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    -webkit-font-smoothing: anti-aliased;
+}
+
+li a:hover {
+    background-color: #000000;
+    display: block;
+    box-sizing: border-box;
+}
+
+li {
+    float: right;
+}
+
+ul {
+    margin-top: 0px;
+    font-size: calc(12px + 0.5vw);
+    font-family: serif;
+    list-style-type: none;
+    background: #333333;
+    width: 100%;
+    height: 10%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.lt_left {
+    float: left;
+}
+
+
+
+.bottom_ul {
+    margin: 20px 0px 0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: calc(12px + 0.5vw);
+    border-radius: 0px 0px 10px 10px;
+        -webkit-font-smoothing: anti-aliased;
+}
+
+
+.small-width-page {
+    margin: 20px auto;
+    padding: 1vh 0px 0px;
+    width: 80vw;
+    font-size: calc(10px + 0.5vw);
+    text-shadow: 1px 1px 1px rgba(249, 249, 249, 0.5);
+    min-width: 450px;
+    max-width: 600px;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.chinese_char {
+    font-family: Microsoft JhengHei;
+}
+
+.main_work {
+    margin: 10%;
+}
