@@ -20,11 +20,6 @@
   font-family: "lato", Arial, sans-serif;
 }
 
-.inter {
-  font-family: inter;
-  letter-spacing: 0.5px;
-}
-
 h1,
 h2,
 .lato {
@@ -209,6 +204,7 @@ h2 {
 
 .nav-bar {
   position: fixed;
+  justify-content: space-between;
   transition: box-shadow var(--transition-5);
   top: 0;
   right: 0;
@@ -258,17 +254,15 @@ h2 {
   flex-direction: row;
   text-align: center;
   align-items: center;
+  justify-content: space-between;
   flex: 1 1 auto;
 }
 
-.cate .navbtn {
-  width: 100px;
+.cate .cate {
+  width: 200%;
+  text-align: left;
   flex: 1 1 auto;
-  padding: 10px 0px;
-  cursor: pointer;
-  border-width: 0.1px;
-  border-radius: 999999px;
-  transition: color 0.2s;
+  padding-left: 200px;
 }
 
 .cate .navbtn:hover {
@@ -426,6 +420,11 @@ input[type="checkbox"]:checked ~ .side-bar .content {
 
 .bodycontent1 p {
   margin: 16px 0px;
+}
+
+.searching {
+  width: 500px;
+  flex: 1 0 auto;
 }
 
 input[type="submit"] {
