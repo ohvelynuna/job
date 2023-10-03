@@ -335,7 +335,6 @@
   .side-bar .content {
     flex: 0 0 auto;
     background-color:var(--background-color);
-    padding: 10px 20px;
     display: none;
     cursor: pointer;
     
@@ -343,7 +342,7 @@
   
   .side-bar .content:hover {
     transition: 0.2s all;
-    border-radius: 99px;
+    border-color: transparent;
     box-shadow: -400px 0px 200px 1px var(--red-shadow-color);
     color: var(--highlight-color);
     transform: translate(-3px, 0px);
