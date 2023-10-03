@@ -7,6 +7,7 @@
   --red-shadow-color: #662549;
   --side-bar-translate: -30px, 0px;
   --side-bar-translate-pre: -300px, 0px;
+  --font-weight: 300;
   background: var(--shadow-color);
 }
 
@@ -22,14 +23,36 @@
 
 h1,
 h2,
-.lato {
+h4 .lato {
   font-family: "lato";
-  font-weight: 100;
+  font-weight: var(--font-weight);
+}
+
+h1 {
+  font-weight: var(--font-weight);
+  font-size: 5rem;
+  background: -webkit-linear-gradient(
+    75deg,
+    var(--text-color) 0%,
+    var(--highlight-color) 50%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: 0px 0px 0.5px var(--text-color);
 }
 
 p,
 .montserrat {
-  font-family: "inter";
+  font-family: "Lato";
 }
 
 .column-web-layout-container {
@@ -74,13 +97,6 @@ p,
   font-size: 10px;
 }
 
-h4 {
-  font-size: 2rem;
-  font-weight: lighter;
-  margin-bottom: 2rem;
-  text-shadow: 0px 0px 0.5px var(--text-color);
-}
-
 html {
   --transition: 0s;
   --transition-5: 0s;
@@ -94,7 +110,7 @@ html {
   margin: 0px;
   padding: 0px;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: var(--font-weight);
 }
 
 .about-me {
@@ -134,23 +150,6 @@ a {
 
 a:hover {
   color: var(--text-color);
-}
-
-h1 {
-  font-weight: 100;
-  font-size: 5rem;
-  background: -webkit-linear-gradient(
-    75deg,
-    var(--text-color) 0%,
-    var(--highlight-color) 50%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h2 {
-  font-weight: 100;
-  font-size: 3rem;
 }
 
 .navbtn::selection,
@@ -234,7 +233,7 @@ h2 {
   flex-shrink: 0;
   font-size: 20px;
   font-weight: 1;
-  font-family: "inter";
+  font-family: "Lato";
   cursor: default;
   transition: color 0.2s;
 }
@@ -390,7 +389,7 @@ input[type="checkbox"]:checked ~ .side-bar .content {
 
 .text-center-container > * {
   text-align: center;
-  font-family: "inter";
+  font-family: "Lato";
 }
 
 .padding-top {
