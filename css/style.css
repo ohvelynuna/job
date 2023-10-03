@@ -84,7 +84,7 @@ h4 {
 html {
   --transition: 0s;
   --transition-5: 0s;
-  min-width: 330px;
+  min-width: 500px;
   min-height: 100vh;
 }
 
