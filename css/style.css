@@ -64,6 +64,12 @@ p,
     rgba(21, 21, 21, 1) 20%,
     rgba(48, 27, 63, 1) 100%
   );
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 300px;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  text-overflow: ellipsis;
 }
 
 .row-container {
