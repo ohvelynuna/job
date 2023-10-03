@@ -100,7 +100,7 @@ p,
 html {
   --transition: 0s;
   --transition-5: 0s;
-  min-width: 500px;
+  min-width: 380px;
   min-height: 100vh;
 }
 
