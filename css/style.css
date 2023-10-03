@@ -7,12 +7,21 @@
     --red-shadow-color: #662549;
     --side-bar-translate: -30px, 0px;
     --side-bar-translate-pre: -300px, 0px;
+
   }
   
   @media screen  and (max-width: 900px){
     #cate{
       display: none;
     }
+  }
+  
+  html {
+
+    --transition: 0s;
+    --transition-5: 0s;
+    min-width: 435px;
+    min-height: 100vh;
   }
   
   * {
@@ -48,11 +57,20 @@
   
   
   #logo a{
-    color: var(--text-color)
+    color: var(--text-color);
+    font-weight: 1;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+
+  #logo a:hover {
+    color: var(--highlight-color);
   }
 
   a {
     text-decoration: none;
+    color: inherit;
+
   }
 
   a:hover {
@@ -92,7 +110,8 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding-top: 200px;
-    padding-left: 50px;
+    padding-left: 30px;
+    padding-right: 30%;
     padding-bottom: 500px;
     justify-content: space-around;
     align-items: space-around;
@@ -144,24 +163,34 @@
   
   .nav-bar {
     position: fixed;
-    transition: box-shadow 5s;
+    transition: box-shadow var(--transition-5);
     top: 0;
     right: 0;
     left: 0;
-    width: 100%;
     background-color: var(--background-color);
     opacity: 1;
-    min-width: 300px;
-    box-shadow: 0 0 5px 2px var(--red-shadow-color);
+    animation-duration: 12s;
+    animation-name: breathinglight;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
     display: flex;
     flex-direction: row;
   
   }
   
+  @keyframes breathinglight {
+    from {
+      box-shadow: 0 0 2px 1px var(--shadow-color);
+    }
+
+    to {
+      box-shadow: 0 0 2px 1px var(--highlight-color);
+    }
+  }
+
   #logo {
     flex-grow: 2;
     flex-shrink: 0;
-    min-width: 200px;
     font-size: 20px;
     font-weight: 1;
     font-family: inter;
@@ -236,7 +265,7 @@
     padding: 1px 12px;
     margin: 2.98px;
     background-color: var(--text-color);
-    transition: all 0.2s;
+    transition: all var(--transition);
     border-radius: 5px;
     z-index: 9999;
   }
@@ -276,7 +305,7 @@
   input[type="checkbox"]:checked ~ .side-bar{
     transform: translate(var(--side-bar-translate));
     margin: 0;
-    width: 25rem;
+    width: 244px;
     color: var(--text-color);
     box-shadow: 1px 0px 30px 0.01px var(--shadow-color);
     opacity: 1;
@@ -290,12 +319,12 @@
     
   input[type="checkbox"]:checked ~ .side-bar .content{
     display: flex;
-  
   }
   
 
   
   .side-bar .content {
+    flex: 0 0 auto;
     background-color:var(--background-color);
     padding: 10px 20px;
     display: none;
@@ -314,7 +343,6 @@
   
   .side-bar {
     display: flex;
-    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
@@ -322,11 +350,10 @@
     text-align: center;
     transform: translate(var(--side-bar-translate-pre));
     height: 150vh;
-    width: 244px;
     opacity: 1;
     height: 100%;
     position: fixed;
-    transition: 0.5s transform;
+    transition: var(--transition) transform;
     cursor: default;
     z-index: 1000;
   }
@@ -390,46 +417,43 @@
   .wrapper {
     display: flex;
     align-items: space-between;
+    justify-content: space-between;
     flex-direction: column;
-    background: linear-gradient(145deg, rgba(21,21,21,1) 50%, rgba(48,27,63,1) 100%);
+    background: linear-gradient(145deg, rgba(21,21,21,1) 20%, rgba(48,27,63,1) 100%);
   }
   
   .footer {
-    height: 80vh;
+    min-height: 80vh;
     margin-top: auto;
     position: relative;
-    min-width: 300px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     background-color: var(--shadow-color);
-    text-align: center;
     color: var(--text-color);
     padding: var(--padding);
+    flex-wrap:wrap;
     font-size: 10px;
     z-index: 0;
+    bottom: 0px;
   }
   
   .footer-copyright {
-    padding: 0px 20px;
+    padding: 80px;
     text-align: center;
-    font-size: 10px;
+    font-size: 11px;
   }
   
   .footer-follow {
     display: flex;
     flex-direction: row;
-    position: absolute;
-    top: 30px;
-    left: 0;
-    right: 0;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+    align-items:  center;
     justify-content: space-around;
   }
   
   .footer-follow span{
-    width: 25%;
-    height: 30px;
+    text-align: center;
   }
   
   .footer-follow span:hover {
