@@ -7,7 +7,8 @@
     --red-shadow-color: #662549;
     --side-bar-translate: -30px, 0px;
     --side-bar-translate-pre: -300px, 0px;
-
+    background: var(--shadow-color);
+    
   }
   
   @media screen  and (max-width: 900px){
@@ -111,7 +112,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     padding-top: 200px;
-    padding-left: 30px;
     padding-bottom: 500px;
     justify-content: space-around;
     align-items: space-around;
@@ -123,7 +123,9 @@
   .column-web-layout-container {
     display: flex;
     flex-direction: row;
-
+    justify-content: space-between;
+    background: linear-gradient(145deg, rgba(21,21,21,1) 20%, rgba(48,27,63,1) 100%);
+    
   }
   
   .left-web-section-nav{
@@ -140,12 +142,12 @@
   }
   
   .left-web-section {
-    flex: 1 1 auto;
-    width: 15%;
+    flex: 0 1 auto;
+    width: calc(25vw + -188.75px);
   }
   
   .left-web-section-nav span {
-    flex: 1 0 auto;
+    flex: 1 1 auto;
     margin-top: 20px;
     max-height: 70px;
     max-width: 60px;
@@ -156,7 +158,7 @@
   .right-web-section {
     display: flex;
     flex: 1 1 auto;
-    width: 25%;
+    width: 30px;
     align-items: flex-start;
     justify-content: center;
   }
@@ -358,6 +360,7 @@
     z-index: 1000;
   }
   
+
   .text-right {
     text-align: right;
   }
@@ -366,6 +369,10 @@
       padding-top: 50px;
   }
   
+  .padding-bottom {
+      padding-bottom: 50px;
+  }
+
   .text-left {
     flex: 1 1 auto;
     text-align: left;
@@ -419,13 +426,11 @@
     align-items: space-between;
     justify-content: space-between;
     flex-direction: column;
-    background: linear-gradient(145deg, rgba(21,21,21,1) 20%, rgba(48,27,63,1) 100%);
-    padding-right: 30%;
+    
   }
   
   .footer {
     min-height: 80vh;
-    margin-top: auto;
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -433,10 +438,9 @@
     background-color: var(--shadow-color);
     color: var(--text-color);
     padding: var(--padding);
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     font-size: 10px;
     z-index: 0;
-    bottom: 0px;
   }
   
   .footer-copyright {
@@ -457,7 +461,7 @@
     text-align: center;
   }
   
-  .footer-follow span:hover {
+  .hoverlink:hover {
     color: var(--highlight-color);
     cursor: pointer;
   }
