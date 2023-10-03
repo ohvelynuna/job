@@ -110,6 +110,7 @@ html {
   margin: 0px;
   padding: 0px;
   font-size: 1rem;
+  font-family: Lato, inter;
   font-weight: var(--font-weight);
 }
 
