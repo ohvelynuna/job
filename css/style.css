@@ -30,7 +30,7 @@ h4 .lato {
 
 h1 {
   font-weight: var(--font-weight);
-  font-size: 5rem;
+  font-size: 4rem;
   background: -webkit-linear-gradient(
     75deg,
     var(--text-color) 0%,
@@ -109,7 +109,7 @@ html {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-family: Lato, inter;
   font-weight: var(--font-weight);
 }
