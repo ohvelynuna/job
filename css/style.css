@@ -12,7 +12,7 @@
   --content-font-size: 1.5rem;
   --min-left-right: 69px;
   --min-left-right-650: 40px;
-  --work-section-width: 50ch;
+  --work-section-width: 40ch;
   background: var(--shadow-color);
 }
 
