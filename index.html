@@ -26,7 +26,7 @@
             <span></span>
             <span></span>
             <span></span>
-            <div class="side-bar-cover"></div>
+            <div class="side-bar-cover" id="side-bar-cover"></div>
             <div class="side-bar">
 
               <a href="roadmap.html">
@@ -119,7 +119,7 @@
         document.body.style.setProperty("--transition", "0.2s");
         document.body.style.setProperty("--transition5", "5s");
       });
-      let sidebarcover = document.getElementById('sidebar');
+      let sidebarcover = document.getElementById('side-bar-cover');
       sidebarcover.addEventListener('mousewheel', e => e.preventDefault());
       sidebarcover.addEventListener('touchmove', e => e.preventDefault());
     </script>
