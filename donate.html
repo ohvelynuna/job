@@ -10,13 +10,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <title>Nightingales Bio 夜鶯文字</title>
-    <script>
-        window.addEventListener("DOMContentLoaded", () => {
-            document.body.style.setProperty("--transition", "0.2s");
-            document.body.style.setProperty("--transition5", "5s");
-        });
-
-    </script>
 </head>
 
 
@@ -98,7 +91,15 @@
             </div>
             <div class="right-web-section"></div>
         </div>
-
+        <script>
+            window.addEventListener("DOMContentLoaded", () => {
+                document.body.style.setProperty("--transition", "0.2s");
+                document.body.style.setProperty("--transition5", "5s");
+            });
+            let sidebarcover = document.getElementById('sidebar');
+            sidebarcover.addEventListener('mousewheel', e => e.preventDefault());
+            sidebarcover.addEventListener('touchmove', e => e.preventDefault());
+        </script>
         <div class="footer">
             <div class="footer-follow">
                 <a href="https://www.instagram.com/nightingales.words" target="_blank" rel="noopener noreferrer"><span

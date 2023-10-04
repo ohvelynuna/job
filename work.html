@@ -9,12 +9,6 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=lato" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Esteban" />
   <title>Past Work</title>
-  <script>
-    window.addEventListener("DOMContentLoaded", () => {
-      document.body.style.setProperty("--transition", "0.2s");
-      document.body.style.setProperty("--transition5", "5s");
-    });
-  </script>
 </head>
 
 <body class="lato">
@@ -27,7 +21,7 @@
             <span></span>
             <span></span>
             <span></span>
-            <div class="side-bar-cover"></div>
+            <div class="side-bar-cover" id="sidebar"></div>
             <div class="side-bar">
 
               <a href="roadmap.html">
@@ -207,6 +201,15 @@
       </div>
     </div>
   </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      document.body.style.setProperty("--transition", "0.2s");
+      document.body.style.setProperty("--transition5", "5s");
+    });
+    let sidebarcover = document.getElementById('sidebar');
+    sidebarcover.addEventListener('mousewheel', e => e.preventDefault());
+    sidebarcover.addEventListener('touchmove', e => e.preventDefault());
+  </script>
 </body>
 
 </html>
