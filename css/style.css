@@ -91,6 +91,7 @@ p,
 
 .row-container {
   display: flex;
+  flex: 0 1 auto;
   flex-direction: column;
   flex-wrap: wrap;
   padding-top: 200px;
@@ -102,7 +103,7 @@ p,
 
 .past-work-container {
   display: flex;
-  flex: 0 1 auto;
+  flex: 0 1 100%;
   flex-direction: row;
   flex-wrap: wrap;
   padding-top: 200px;
@@ -113,8 +114,8 @@ p,
 }
 
 .work-section {
-  flex: 1 1 auto;
-  width: var(--work-section-width);
+  flex: 1 1 var(--work-section-width);
+  /* width: var(--work-section-width); */
   font-size: var(--content-font-size);
 }
 
@@ -122,11 +123,11 @@ p,
   margin-top: 5ch;
 }
 
-@media screen and (max-width: 1300px) {
+/* @media screen and (max-width: 1300px) {
   .work-section {
     width: 100%;
   }
-}
+} */
 
 * {
   color: var(--text-color);
@@ -193,7 +194,7 @@ a:hover {
   flex-direction: column;
   justify-content: flex-start;
   top: 0;
-  flex: 1 1 auto;
+  flex: 1 1 0;
   width: 25%;
   background-color: var(--text-color);
   box-shadow: inset -5px -5px 1px 5px var(--shadow-color);
@@ -201,7 +202,7 @@ a:hover {
 }
 
 .left-web-section {
-  flex: 0 1 auto;
+  flex: 0 1 0;
   min-width: var(--min-left-right);
 }
 
@@ -212,13 +213,12 @@ a:hover {
 }
 
 .right-web-section {
-  flex: 0 1 auto;
-  min-width: var(--min-left-right);
+  flex: 0 1 var(--min-left-right);
 }
 
 @media screen and (max-width: 650px) {
   .right-web-section {
-    min-width: var(--min-left-right-650);
+    flex: 0 1 var(--min-left-right);
   }
 }
 
