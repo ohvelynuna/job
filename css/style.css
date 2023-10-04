@@ -390,6 +390,24 @@ input[type="checkbox"]:checked ~ .side-bar .content {
   display: flex;
 }
 
+input[type="checkbox"]:checked ~ .side-bar-cover {
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  position: fixed;
+  background-color: var(--background-color);
+  opacity: 0.5;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.side-bar-cover {
+  opacity: 0;
+  width: 100%;
+  transition: 0.25s all;
+}
+
 .side-bar .content {
   flex: 0 0 0;
   background-color: var(--background-color);
@@ -420,7 +438,7 @@ input[type="checkbox"]:checked ~ .side-bar .content {
   left: 0;
   bottom: 0;
   position: fixed;
-  transition: all 0.55s;
+  transition: all 0.25s;
   cursor: default;
   z-index: 1000;
 }
