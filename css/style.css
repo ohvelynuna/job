@@ -10,16 +10,9 @@
   --font-weight: 300;
   --font-size: 1rem;
   --content-font-size: 1.5rem;
-  --logo-size: 20px;
   --min-left-right: 69px;
   --min-left-right-650: 40px;
   background: var(--shadow-color);
-}
-
-@media screen and (max-width: 900px) {
-  #cate {
-    display: none;
-  }
 }
 
 body {
@@ -236,7 +229,7 @@ a:hover {
   left: 0;
   background-color: var(--background-color);
   opacity: 1;
-  animation-duration: 12s;
+  animation-duration: 3s;
   animation-name: breathinglight;
   animation-iteration-count: infinite;
   animation-direction: alternate;
@@ -257,7 +250,6 @@ a:hover {
 #logo {
   flex-grow: 2;
   flex-shrink: 0;
-  font-size: var(--logo-size);
   font-weight: 1;
   font-family: "Lato";
   cursor: default;
@@ -277,17 +269,34 @@ a:hover {
   font-size: var(--font-size);
   display: flex;
   flex-direction: row;
-  text-align: center;
   align-items: center;
   justify-content: space-between;
   flex: 1 1 auto;
 }
 
-.cate .cate {
-  width: 200%;
-  text-align: left;
+.cate-right-section {
+  display: flex;
   flex: 1 1 auto;
-  padding-left: 200px;
+  justify-content: flex-end;
+  padding-right: 20px;
+  align-items: center;
+  text-align: right;
+  max-width: 350px;
+}
+
+@media screen and (max-width: 900px) {
+  .cate-right-section {
+    display: none;
+  }
+}
+
+.cate-right-items {
+  flex: 1 1 auto;
+  justify-self: flex-end;
+}
+
+.cate .cate {
+  flex: 1 1 auto;
 }
 
 .cate .navbtn:hover {
