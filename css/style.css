@@ -122,9 +122,9 @@ p,
   margin-top: 5ch;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1300px) {
   .work-section {
-    width: 60%;
+    width: 100%;
   }
 }
 
