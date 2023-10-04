@@ -5,8 +5,8 @@
   --padding: 80px 0px;
   --highlight-color: #3c415c;
   --red-shadow-color: #662549;
-  --side-bar-translate: -30px, 0px;
-  --side-bar-translate-pre: -300px, 0px;
+  --side-bar-translate: 0px, 0px;
+  --side-bar-translate-pre: -500px, 0px;
   --font-weight: 300;
   --font-size: 1rem;
   --content-font-size: 1.5rem;
@@ -375,14 +375,9 @@ input[type="checkbox"]:checked ~ .side-bar .content {
 
 input[type="checkbox"]:checked ~ .side-bar {
   transform: translate(var(--side-bar-translate));
-  margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  flex-wrap: wrap;
   width: 102%;
   max-width: 500px;
-  padding: 50px 20px 50px 0;
   color: var(--text-color);
   box-shadow: 1px 0px 30px 0.01px var(--shadow-color);
   opacity: 1;
@@ -396,9 +391,8 @@ input[type="checkbox"]:checked ~ .side-bar .content {
 }
 
 .side-bar .content {
-  flex: 0 0 auto;
+  flex: 0 0 0;
   background-color: var(--background-color);
-  display: none;
   cursor: pointer;
 }
 
@@ -412,16 +406,21 @@ input[type="checkbox"]:checked ~ .side-bar .content {
 
 .side-bar {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  text-align: left;
+  flex-direction: column;
+  padding: 0px 20px 0px 0;
   gap: 8px;
-  text-align: center;
+  width: 100%;
+  max-width: 300px;
   transform: translate(var(--side-bar-translate-pre));
-  opacity: 1;
-  height: 100%;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
   position: fixed;
-  transition: var(--transition) transform;
+  transition: all 0.55s;
   cursor: default;
   z-index: 1000;
 }
