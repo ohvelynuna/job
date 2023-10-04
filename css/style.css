@@ -16,6 +16,16 @@
   background: var(--shadow-color);
 }
 
+::-webkit-scrollbar {
+  width: 1px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--highlight-color);
+  min-height: 300px;
+}
+
 body {
   --transition: 0s;
   --transition-5: 0s;
