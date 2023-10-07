@@ -1,13 +1,13 @@
 :root {
   --shadow-color: #121212;
-  --background-color: rgb(21, 21, 21);
-  --text-color: #c0deff;
+  --background-color: rgb(5, 5, 5);
+  --text-color: #d4c4c4;
   --padding: 80px 0px;
-  --highlight-color: #3c415c;
+  --highlight-color: #fff;
   --red-shadow-color: #662549;
   --side-bar-translate: 0px, 0px;
   --side-bar-translate-pre: -500px, 0px;
-  --font-weight: 300;
+  --font-weight: 900;
   --font-size: 1rem;
   --content-font-size: 1.5rem;
   --min-left-right: 69px;
@@ -50,14 +50,7 @@ h4 .lato {
 
 h1 {
   font-weight: var(--font-weight);
-  font-size: 6rem;
-  background: -webkit-linear-gradient(
-    75deg,
-    var(--text-color) 0%,
-    var(--highlight-color) 50%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 13rem;
 }
 
 h2 {
@@ -78,13 +71,17 @@ p,
 .column-web-layout-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   overflow-wrap: break-word;
-  background: linear-gradient(
-    145deg,
-    rgba(21, 21, 21, 1) 20%,
-    rgba(48, 27, 63, 1) 100%
-  );
+  background-image: linear-gradient(
+      to bottom,
+      rgba(21, 21, 21, 0.9),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url("https://images.pexels.com/photos/11431337/pexels-photo-11431337.jpeg");
+  background-size: auto;
+  max-width: 100%;
+  background-repeat: no-repeat;
 }
 
 .row-container {
@@ -202,10 +199,12 @@ a:hover {
 .left-web-section {
   flex: 0 1 0;
   min-width: var(--min-left-right);
+  max-width: 25%;
 }
 
 .right-web-section {
   flex: 0 1 var(--min-left-right);
+  max-width: 25%;
 }
 
 .left-web-section-nav span {
@@ -448,6 +447,10 @@ input[type="checkbox"]:checked ~ .side-bar-cover {
 .text-left {
   flex: 1 1 auto;
   text-align: left;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-justify {
