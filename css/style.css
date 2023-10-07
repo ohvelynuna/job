@@ -1,7 +1,7 @@
 :root {
   --shadow-color: #121212;
   --background-color: rgb(21, 21, 21);
-  --text-color: #b4a5a5;
+  --text-color: #c0deff;
   --padding: 80px 0px;
   --highlight-color: #3c415c;
   --red-shadow-color: #662549;
@@ -375,7 +375,7 @@ input[type="checkbox"]:checked ~ span:nth-of-type(2) {
 
 input[type="checkbox"]:checked ~ span:nth-of-type(3) {
   transform-origin: bottom left;
-  transform: rotatez(-45deg) translate(-2px, 5px);
+  transform: rotatez(-45deg) translate(-1.9px, 5px);
 }
 
 input[type="checkbox"]:checked ~ .side-bar .content {
@@ -401,6 +401,14 @@ input[type="checkbox"]:checked ~ .side-bar .content {
 }
 
 input[type="checkbox"]:checked ~ .side-bar-cover {
+  pointer-events: all;
+  cursor: default;
+  opacity: 0.8;
+}
+
+.side-bar-cover {
+  opacity: 1;
+  width: 100%;
   right: 0;
   left: 0;
   top: 0;
@@ -408,14 +416,9 @@ input[type="checkbox"]:checked ~ .side-bar-cover {
   display: flex;
   position: fixed;
   background-color: var(--background-color);
-  opacity: 0.7;
-  z-index: 999;
-  cursor: default;
-}
-
-.side-bar-cover {
   opacity: 0;
-  width: 100%;
+  z-index: 999;
+  pointer-events: none;
   transition: 0.25s all;
 }
 
