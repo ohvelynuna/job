@@ -60,20 +60,8 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-@media screen and (max-width: 650px) {
-  h1 {
-    font-size: 3rem;
-  }
-}
-
 h2 {
   font-size: 3rem;
-}
-
-@media screen and (max-width: 600px) {
-  h2 {
-    font-size: 2rem;
-  }
 }
 
 h4 {
@@ -216,20 +204,8 @@ a:hover {
   min-width: var(--min-left-right);
 }
 
-@media screen and (max-width: 650px) {
-  .left-web-section {
-    min-width: var(--min-left-right-650);
-  }
-}
-
 .right-web-section {
   flex: 0 1 var(--min-left-right);
-}
-
-@media screen and (max-width: 650px) {
-  .right-web-section {
-    flex: 0 1 var(--min-left-right);
-  }
 }
 
 .left-web-section-nav span {
@@ -303,12 +279,6 @@ a:hover {
   align-items: center;
   text-align: right;
   max-width: 350px;
-}
-
-@media screen and (max-width: 900px) {
-  .cate-right-section {
-    display: none;
-  }
 }
 
 .cate-right-items {
@@ -565,4 +535,30 @@ input[type="text"] {
 .hoverlink:hover {
   color: var(--highlight-color);
   cursor: pointer;
+}
+
+/* responsive */
+
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .left-web-section {
+    min-width: var(--min-left-right-650);
+  }
+  .right-web-section {
+    flex: 0 1 var(--min-left-right);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cate-right-section {
+    display: none;
+  }
 }
