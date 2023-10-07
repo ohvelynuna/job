@@ -7,7 +7,7 @@
   --red-shadow-color: #662549;
   --side-bar-translate: 0px, 0px;
   --side-bar-translate-pre: -500px, 0px;
-  --font-weight: 900;
+  --font-weight: 300;
   --font-size: 1rem;
   --content-font-size: 1.5rem;
   --min-left-right: 69px;
@@ -197,8 +197,7 @@ a:hover {
 }
 
 .left-web-section {
-  flex: 0 1 0;
-  min-width: var(--min-left-right);
+  flex: 0 1 var(--min-left-right);
   max-width: 25%;
 }
 
@@ -499,7 +498,7 @@ input[type="text"] {
 .wrapper {
   display: flex;
   align-items: space-between;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
 }
 
