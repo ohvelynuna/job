@@ -358,7 +358,7 @@ input[type="checkbox"]:checked ~ .side-bar {
   width: 102%;
   max-width: 500px;
   color: var(--text-color);
-  box-shadow: 1px 0px 30px 0.01px var(--shadow-color);
+  box-shadow: 1px 0px 5px 0.01px var(--shadow-color);
   opacity: 1;
   background-color: var(--background-color);
   pointer-events: none;
