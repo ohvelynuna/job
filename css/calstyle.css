@@ -7,8 +7,6 @@ button, input {
   color: black;
 }
 
-
-
 .cal-label label {
   z-index: -999;
 }
@@ -51,11 +49,11 @@ h1 {
   flex-direction: column;
   gap: 5px;
   padding: 50px;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .result-graph {
-  height: 250px;
+  height: 450px;
 }
 
 
