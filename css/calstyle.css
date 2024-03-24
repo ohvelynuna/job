@@ -1,0 +1,66 @@
+h1 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.web-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20vh 20px;
+  border: 1px solid grey;
+  gap: 5px;
+}
+
+#result-graph .resultabs {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.calculator-panel {
+  margin: 5px;
+}
+
+
+
+.text-results {
+  margin-top: 20px;
+}
+
+
+
+h1 {
+  font-size: 50px;
+}
+
+.calculator-content, .result-graph {
+  border: solid 0.5px grey;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 50px;
+  justify-content: space-around;
+}
+
+.result-graph {
+  height: 250px;
+}
+
+
+.cal-label {
+  display: inline-block;
+  width: 100px;
+}
+
+#age1, #age2 {
+   width: 50px;
+}
+
+.abs {
+  background: pink;
+  width: 5px;
+  height: 30px;
+  margin-bottom: 5px;
+}
+
