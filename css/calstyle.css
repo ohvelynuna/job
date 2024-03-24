@@ -23,7 +23,9 @@ button {
 }
 
 
-
+.progress, .progress-bar {
+  box-shadow: inset 1px 1px 2px 1px black;
+}
 
 .cal-label label {
   z-index: -1;
