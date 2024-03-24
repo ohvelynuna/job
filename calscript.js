@@ -1,43 +1,44 @@
 class absCalculator {
-  constructor(suffix) {
-    this.suffix = suffix;
-  }
+    constructor(suffix) {
+        this.suffix = suffix;
+        this.progressBar = document.querySelector(`#resultabs-${suffix} .progress-bar`);
+    }
 
-  getValue() {
-    let value = Number(document.getElementById(`inputnum-${this.suffix}`).value);
-    let result = `<div class='abs'></div>`;
-    document.getElementById(`resultabs-${this.suffix}`).innerHTML = result.repeat(value);
-    calculateBoth();
-  }
+    getValue() {
+        let value = Number(document.getElementById(`inputnum-${this.suffix}`).value);
+        this.progressBar.style.width = `${value}%`;
+        this.progressBar.setAttribute('aria-valuenow', value*2);
+        calculateBoth();
+    }
 
-  addOne() {
-    const inputNum = document.getElementById(`inputnum-${this.suffix}`);
-    inputNum.value = Number(inputNum.value) + 1;
-    this.getValue();
-    calculateBoth();
-  }
+    addOne() {
+        const inputNum = document.getElementById(`inputnum-${this.suffix}`);
+        inputNum.value = Number(inputNum.value) + 1;
+        this.getValue();
+        calculateBoth();
+    }
 
-  reset() {
-    const inputNum = document.getElementById(`inputnum-${this.suffix}`);
-    inputNum.value = 1;
-    this.getValue();
-    calculateBoth();
-  }
+    reset() {
+        const inputNum = document.getElementById(`inputnum-${this.suffix}`);
+        inputNum.value = 1;
+        this.getValue();
+        calculateBoth();
+    }
 }
 
 function addBoth() {
-  absCalculatorInstance.addOne();
-  absCalculatorInstance_1.addOne();
-  calculateBoth();
+    absCalculatorInstance.addOne();
+    absCalculatorInstance_1.addOne();
+    calculateBoth();
 }
 
 function calculateBoth() {
-  let one = Number(document.getElementById(`inputnum-one`).value)
-  let two = Number(document.getElementById(`inputnum-two`).value)
-  document.getElementById('percentage-result').innerHTML = `The ${one > two ? two : one} year old SON will be ${one >= two ? (two / one) * 100 : (one / two) * 100}% of FATHER's age when FATHER is ${one > two ? one : two} years old`
-  document.getElementById('age1').innerHTML = `${one >= two ? "Father's age:" : "Son's age: "}`
-  document.getElementById('age2').innerHTML = `${one >= two ? "Son's age:" : "Father's age: "}`
-  document.getElementById('legal').innerHTML  = `${Math.abs(one - two) < 18 ? "It's illegal... Are you sure?" : ""}`
+    let one = Number(document.getElementById(`inputnum-one`).value)
+    let two = Number(document.getElementById(`inputnum-two`).value)
+    document.getElementById('percentage-result').innerHTML = `The ${one > two ? two : one} year old SON will be ${one >= two ? (two / one) * 100 : (one / two) * 100}% of FATHER's age when FATHER is ${one > two ? one : two} years old`
+    document.getElementById('age1').innerHTML = `${one >= two ? "Father's age:" : "Son's age: "}`
+    document.getElementById('age2').innerHTML = `${one >= two ? "Son's age:" : "Father's age: "}`
+    document.getElementById('legal').innerHTML = `${Math.abs(one - two) < 18 ? "It's illegal... Are you sure?" : ""}`
 }
 
 
@@ -68,12 +69,12 @@ function mouseButtonDown(method) {
         mouseDown = true;
         console.log('Mouse button is held down');
         performContinuousActionAddOne();
-    }  
+    }
     if (!mouseDown && method == 'add-two') {
         mouseDown = true;
         console.log('Mouse button is held down');
         performContinuousActionAddTwo();
-    }  
+    }
 
 }
 
@@ -89,20 +90,20 @@ function mouseButtonUp() {
 function performContinuousActionAddBoth() {
     if (!intervalId) {
         console.log('Starting continuous action');
-        intervalId = setInterval(addBoth, 100); // Start repeating the action
+        intervalId = setInterval(addBoth, 135); // Start repeating the action
     }
 }
 
 function performContinuousActionAddOne() {
     if (!intervalId) {
-        intervalId = setInterval(() => absCalculatorInstance.addOne(), 100); // Start repeating the action
+        intervalId = setInterval(() => absCalculatorInstance.addOne(), 135); // Start repeating the action
         console.log('Starting continuous action');
     }
 }
 
 function performContinuousActionAddTwo() {
     if (!intervalId) {
-        intervalId = setInterval(() => absCalculatorInstance_1.addOne(), 100); // Start repeating the action
+        intervalId = setInterval(() => absCalculatorInstance_1.addOne(), 135); // Start repeating the action
         console.log('Starting continuous action');
     }
 }
