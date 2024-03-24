@@ -4,12 +4,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=inter">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=lato">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="css/calstyle.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
   <title>Nightingales Bio 夜鶯文字</title>
 
 </head>
@@ -67,36 +68,42 @@
   </div>
     <section class="web-container">
       <section class="result-graph" id="result-graph">
-        <h2>Twice-as-old brute-force calculator</h2>
+        <h2>Twice as old brute-force calculator</h2>
         <p>inspired by: <a href="https://www.codewars.com/kata/5b853229cfde412a470000d0/train/javascript" target="_blank" rel="noopener noreferrer"><span class="hoverlink">this kata</span></a></p>
-        <div id="resultabs-one" class="resultabs"></div>
-        <div id="resultabs-two" class="resultabs"></div>
+        <div class="progress" style="height: 30px;" id="resultabs-one">
+          <div class="progress-bar-transition progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+        </div>
+        <div class="progress" style="height: 30px;" id="resultabs-two">
+          <div class="progress-bar-transition progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+        </div>
       </section>
+
       <section class="calculator-content">
         <section class="calculator-panel" id="calculator-one-panel">
           <section class="cal-label">
-            <label for="inputnum-one" id="age1">Age: </label>
+            <p id="age1">Age: </p>
           </section>
           <input id="inputnum-one" type="number" value="1">
-          <button onClick="absCalculatorInstance.getValue()">Set Age</button>
-          <button id="add-one-one" onClick="absCalculatorInstance.addOne()">Add One</button>
-          <button onClick="absCalculatorInstance.reset()">Reset</button>
+          <button class="btn btn-dark" onClick="absCalculatorInstance.getValue()">Set Age</button>
+          <button class="btn btn-dark" id="add-one-one" onClick="absCalculatorInstance.addOne()">Add One</button>
+          <button class="btn btn-dark" onClick="absCalculatorInstance.reset()">Reset</button>
         </section>
 
         <section class="calculator-panel" id="calculator-two-panel">
           <section class="cal-label">
-            <label for="inputnum-two" id="age2">Age: </label>
+            <p id="age2">Age: </p>
           </section>
           <input id="inputnum-two" type="number" value="1">
-          <button onClick="absCalculatorInstance_1.getValue()">Set Age</button>
-          <button id="add-one-two" onClick="absCalculatorInstance_1.addOne()">Add One</button>
-          <button onClick="absCalculatorInstance_1.reset()">Reset</button>
+          <button class="btn btn-dark" onClick="absCalculatorInstance_1.getValue()">Set Age</button>
+          <button class="btn btn-dark" id="add-one-two" onClick="absCalculatorInstance_1.addOne()">Add One</button>
+          <button class="btn btn-dark" onClick="absCalculatorInstance_1.reset()">Reset</button>
         </section>
         <section class="calculator-panel" id="calculator-panel-both">
-          <button id="addboth-button" onclick="addBoth()">Time flies by 1 year (Hold to add more)</button>
+          <button class="btn btn-dark" id="addboth-button" onclick="addBoth()">Time flies by 1 year (Hold to add more)</button>
           <section class="text-results">
             <div id="percentage-result"></div>
             <div id="legal"></div>
+
           </section>
         </section>
       </section>
@@ -122,7 +129,8 @@
       sidebarcover.addEventListener('mousewheel', e => e.preventDefault());
       sidebarcover.addEventListener('touchmove', e => e.preventDefault());
     </script>
-    <script src="calscript.js"></script>
+    <script src="js/calscript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
