@@ -57,15 +57,12 @@ h1 {
 }
 
 
-.cal-label {
+.cal-label, #age1, #age2{
   display: inline-block;
-  width: 100px;
+  width: 200px;
+  font-size: 15px;
 }
 
-#age1,
-#age2 {
-  width: 50px;
-}
 
 .abs {
   background: pink;
