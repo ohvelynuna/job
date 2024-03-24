@@ -3,12 +3,30 @@ h1 {
   margin: 0px;
 }
 
-button, input {
-  color: black;
+input {
+  color: rgba(21, 21, 21, 0.9);
 }
 
+.button-container { /* Assuming buttons are inside this container */
+  display: flex;
+  flex-wrap: nowrap; /* Prevents wrapping of items */
+}
+
+button {
+  flex-shrink: 0; /* Prevents the button from shrinking */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+  white-space: nowrap; /* Prevents text wrapping */
+  min-width: 80px; /* or whatever width is needed */
+  touch-action: manipulation;
+}
+
+
+
+
 .cal-label label {
-  z-index: -999;
+  z-index: -1;
 }
 
 .web-container {
@@ -18,7 +36,18 @@ button, input {
   padding: 20vh 20px;
   border: 1px solid grey;
   gap: 5px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(21, 21, 21, 0.9),
+    rgba(255, 255, 255, 0.1)
+  ),
+  url("https://images.pexels.com/photos/11431337/pexels-photo-11431337.jpeg");
+background-size: auto;
+max-width: 100%;
+background-repeat: no-repeat;
+
 }
+
 
 #result-graph .resultabs {
   display: flex;
