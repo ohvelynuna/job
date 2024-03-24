@@ -3,6 +3,14 @@ h1 {
   margin: 0px;
 }
 
+button {
+  color: black;
+}
+
+.cal-label label {
+  z-index: -999;
+}
+
 .web-container {
   display: flex;
   flex-direction: column;
@@ -33,7 +41,8 @@ h1 {
   font-size: 50px;
 }
 
-.calculator-content, .result-graph {
+.calculator-content,
+.result-graph {
   border: solid 0.5px grey;
   width: 80%;
   display: flex;
@@ -53,8 +62,9 @@ h1 {
   width: 100px;
 }
 
-#age1, #age2 {
-   width: 50px;
+#age1,
+#age2 {
+  width: 50px;
 }
 
 .abs {
@@ -63,4 +73,3 @@ h1 {
   height: 30px;
   margin-bottom: 5px;
 }
-
