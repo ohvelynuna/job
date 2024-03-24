@@ -1,0 +1,41 @@
+<body>
+
+<section class="web-container">
+<section class="result-graph" id="result-graph">
+  <h1>Twice as old brute-force calculator</h1>  
+  <div id="resultabs-one" class="resultabs"></div>
+  <div id="resultabs-two" class="resultabs"></div>
+</section>
+<section class="calculator-content">
+<section class="calculator-panel" id="calculator-one-panel">
+  <section class="cal-label">
+  <label for="inputnum-one" id="age1">Age: </label>
+  </section>
+  <input id="inputnum-one" type="number" value="1">
+  <button onClick="absCalculatorInstance.getValue()">Set Age</button>
+  <button id="add-one-one" onClick="absCalculatorInstance.addOne()">Add One</button>
+  <button onClick="absCalculatorInstance.reset()">Reset</button>
+</section>
+
+<section class="calculator-panel" id="calculator-two-panel">
+  <section class="cal-label">
+  <label for="inputnum-two" id="age2">Age: </label>
+  </section>
+  <input id="inputnum-two" type="number" value="1">
+  <button onClick="absCalculatorInstance_1.getValue()">Set Age</button>
+  <button id="add-one-two" onClick="absCalculatorInstance_1.addOne()">Add One</button>
+  <button onClick="absCalculatorInstance_1.reset()">Reset</button>
+</section>
+<section class="calculator-panel" id="calculator-panel-both">
+  <button id="addboth-button" onclick="addBoth()">Time flies by 1 year (Hold to add more)</button>
+  <section class="text-results">
+  <div id="percentage-result"></div>
+  <div id="legal"></div>
+  </section>
+</section>
+</section>
+  </section>
+  
+
+</body>
+</html>
