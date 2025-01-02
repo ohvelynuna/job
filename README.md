@@ -1,5 +1,6 @@
 ## At the navigation bar
-<img width="640" alt="image" src="https://github.com/asoro-git/asoro-git.github.io/assets/132867898/9830037a-afc2-4467-98ea-d3c0e8e0019c">
+![image](https://github.com/user-attachments/assets/d3f5ad78-b8bf-4e60-be48-dd68655aa282)
+
 <br>
 type in: <a href="https://asoro-git.github.io/" target="_blank" rel="noopener noreferrer">https://asoro-git.github.io/</a>
 to visit the website of mine
